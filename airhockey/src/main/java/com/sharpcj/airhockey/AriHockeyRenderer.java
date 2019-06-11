@@ -44,20 +44,20 @@ public class AriHockeyRenderer implements GLSurfaceView.Renderer {
         this.mContext = context;
 
         float[] tableVerticesWithTriangles = {
-                0f, 0f,
-                9f, 14f,
-                0f, 14f,  // Triangle 1
+                -0.5f, -0.5f,
+                0.5f, 0.5f,
+                -0.5f, 0.5f,  // Triangle 1
 
-                0f, 0f,
-                9f, 0f,
-                9f, 14f,   // Triangle 2
+                -0.5f, -0.5f,
+                0.5f, -0.5f,
+                0.5f, 0.5f,   // Triangle 2
 
-                0f, 7f,
-                9f, 7f,    // Line 1
+                -0.5f, 0.0f,
+                0.5f, 0.0f,    // Line 1
 
-                4.5f, 2f,    // Point 1
+                0.0f, -0.25f,    // Point 1
 
-                4.5f, 12f    // Point 2
+                0.0f, 0.25f    // Point 2
         };
 
         // 将 Android 虚拟机中的浮点型数组（用来表示坐标）复制到本地内存
@@ -65,6 +65,7 @@ public class AriHockeyRenderer implements GLSurfaceView.Renderer {
                 .order(ByteOrder.nativeOrder()) // 本地内存排序
                 .asFloatBuffer();
 
+        mVertexData.put(tableVerticesWithTriangles);
     }
 
     @Override

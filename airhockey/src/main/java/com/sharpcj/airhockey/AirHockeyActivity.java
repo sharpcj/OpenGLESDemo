@@ -31,7 +31,6 @@ public class AirHockeyActivity extends AppCompatActivity {
             return;
         }
         setContentView(mGlSurfaceView);
-
     }
 
     @Override
