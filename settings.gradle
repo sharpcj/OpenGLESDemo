@@ -1,1 +1,1 @@
-include ':app', ':airhockey', ':coloringairhockey'
+include ':app', ':airhockey', ':coloringairhockey', ':widthandheight'
